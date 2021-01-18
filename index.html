@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clasificador de Imagenes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+</head>
+<body>
+  <!-- Importar el archivo principal -->
+  <main class="main-content">
+    <video class="camara" autoplay="" playsinline muted id="webcam" width="406px" height="268px"></video>
+
+    <div class="console">
+      <p><strong>Predicción</strong><span id="console"></span></p>
+      <p><strong>Probabilidad</strong><span id="console-1"></span></p>
+    </div>
+    
+    <div class="classify-options">
+      <button id="clase-a" class="boton" onclick="addExample(0)">Botella de Agua</button>
+      <button id="clase-b" class="boton" onclick="addExample(1)">Celular</button>
+      <button id="clase-c" class="boton" onclick="addExample(2)">Cubreboca</button>
+      <button id="clase-d" class="boton" onclick="addExample(3)">Teclado</button>
+    </div>
+    
+    <div class="console" id="console2">
+      <p><strong>Predicción</strong><span id="console-2"></span></p>
+      <p><strong>Probabilidad</strong><span id="console-3"></span></p>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
